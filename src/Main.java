@@ -27,7 +27,7 @@ public class Main {
 
     /** @return a transaction of same amount as t, one month later
      * This is a PRODUCER of the class Lecture1_adt.Transaction2
-     * This code will help demostrate the Design exposures still present in transaction2 class
+     * This code will help demonstrate the Design exposures still present in transaction2 class
      * */
 
     public static Transaction2 makeNextPayment(Transaction2 t) {
@@ -64,7 +64,7 @@ public class Main {
 
 
     /** @return a list of 12 monthly payments of identical amounts
-     * This code will help demostrate the Design exposures still present in transaction3 class
+     * This code will help demonstrate the Design exposures still present in transaction3 class
      * */
     public static List<Transaction3> makeYearOfPayments (int amount) throws NullPointerException {
 
