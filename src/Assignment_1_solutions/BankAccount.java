@@ -20,5 +20,4 @@ public class BankAccount {
     }
 
 }
-// Create a custom exception class InsufficientFundsException
 

@@ -6,7 +6,7 @@ public interface TransactionInterface {
     Calendar getDate();
     String getTransactionID();
     void printTransactionDetails();
-    void apply(BankAccount ba);
+    void apply(BankAccount ba) throws InsufficientFundsException;
     boolean reverse();
 }
 

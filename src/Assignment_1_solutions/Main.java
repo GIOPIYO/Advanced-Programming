@@ -13,7 +13,7 @@ public class Main {
         dt.apply(ba);
 
         // Test WithdrawalTransaction
-        WithdrawalTransaction wt = new WithdrawalTransaction(200, Calendar.getInstance());
+        WithdrawalTransaction wt = new WithdrawalTransaction(200, Calendar.getInstance(), "WT001");
         wt.printTransactionDetails();
         try {
             wt.apply(ba);
@@ -30,12 +30,16 @@ public class Main {
 
         BaseTransaction bt = new DepositTransaction(300, Calendar.getInstance(), "DT002");
         bt.printTransactionDetails();
-        bt.apply(ba);
-
-        bt = new WithdrawalTransaction(400, Calendar.getInstance());
-        bt.printTransactionDetails();
         try {
             bt.apply(ba);
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());
+        }
+
+        bt = new WithdrawalTransaction(400, Calendar.getInstance(), "WT002");
+        bt.printTransactionDetails();
+        try {
+            wt.apply(ba);
         } catch (InsufficientFundsException e) {
             System.out.println(e.getMessage());
         }
